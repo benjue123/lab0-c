@@ -161,7 +161,7 @@ bool q_delete_dup(struct list_head *head)
                 list_del(&entry2->list);
 
                 free(entry2->value);
-                // free(entry2);
+                free(entry2);
             }
         }
     }
