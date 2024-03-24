@@ -158,7 +158,7 @@ bool q_delete_dup(struct list_head *head)
         // element_t *tmp = list_entry(element, element_t, list);
         list_for_each_entry_safe (entry2, safe2, head, list) {
             if (entry != entry2 && strcmp(entry->value, entry2->value) == 0) {
-                list_del(&entry2->list);
+                list_del_init(&entry2->list);
 
                 free(entry2->value);
                 free(entry2);
