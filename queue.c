@@ -339,7 +339,7 @@ void merge_two_list(struct list_head *head,
     if (list_empty(right)) {
         list_splice_tail_init(left, &tmp);
     }
-    list_splice_init(&tmp, head);
+    // list_splice_init(&tmp, head);
 }
 
 void merge_sort(struct list_head *head, bool descend)
